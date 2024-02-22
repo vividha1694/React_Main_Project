@@ -2,6 +2,7 @@
 .flex{
     display: flex;
     justify-content: space-around;
+    /* margin-bottom: -35px; */
     
 }
 .div {
@@ -31,60 +32,4 @@
     margin-bottom: 3px;
     color:#49535B;
 
-}
-.category{
-    display: flex;
-    justify-content: space-around;
-   
-}
-.category_card{
-    border: 2px solid rgba(3, 18, 32, 0.06);
-    border-radius: 14px;
-    padding: 10px;
-    width: 400px;
-    height: 320px;
-    display: grid;
-    place-content: center;
-    box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.07);
-}
-.category_title{
-    font-size: 20px;
-    font-weight: 700;
-    color: #0C140F;
-    background-color: #F5F5F5;
-    margin-bottom: 0;
-    padding: 20px 50px;
-    text-align: center;
-    /* margin-top: -78px; */
-   
-}
-.category_list li a{
-    /* padding: 10px 10px; */
-    padding-bottom: 5px;
-    color: #0C140F;
-    position: relative;
-    padding-left: 14px;
-    padding: 7px 30px 10px;
-    padding-left: 40px;
-    display: block;
-    text-decoration: none;
-    
-}
-.btn {
-    display: inline-block;
-    color: #0C140F;
-    font-weight: 500;
-    font-size: 17px;
-    height: 44px;
-    line-height: 43px;
-    /* text-align: center; */
-    padding: 0 75px;
-    border-radius: 6px;
-    background-color: #F9F9F9;
-
-}
-.btn:hover{
-    background-color: #007A70;
-    color: white;
-    border: none;
 }

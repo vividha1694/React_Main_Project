@@ -1,81 +1,70 @@
-import React from 'react'
-import styles from './Home.module.css'
-import { IoIosArrowRoundForward } from "react-icons/io";
+import React from "react";
+import styles from "./Home.module.css";
+import Card from "./CategoryCard";
 
 function Home() {
+  const cardsData = [
+    {
+      title: "English",
+      links: [
+        { url: "#", text: "Basic English Course" },
+        { url: "#", text: "Intermediate English Course" },
+        { url: "#", text: "Advanced English Course" },
+      ],
+      buttonText: "Explore",
+    },
+    {
+      title: "Recorded Classes",
+      links: [
+        { url: "#", text: "British Accent Course" },
+        { url: "#", text: "American Accent Course" },
+        { url: "#", text: "Full IELTS Course" },
+      ],
+      buttonText: "Explore",
+    },
+    {
+      title: "One-to-One Classes",
+      links: [
+        { url: "#", text: "Basic French Language Course" },
+        { url: "#", text: "Basic Japanese Language Course" },
+        { url: "#", text: "Basic Spanish Language Course" },
+      ],
+      buttonText: "Explore",
+    },
+  ];
+
   return (
     <>
-    <div className={styles.flex}>
+      <div className={styles.flex}>
+        <div>
+          <h3 className={styles.head_three}>Top Categories</h3>
+          <h2 className={styles.head_two}>
+            All features <br />
+            Topics by Categories
+          </h2>
+        </div>
+        <div>
+          <p className={styles.para}>
+            “Explore Wonder Girl Janhavi’s Signature English Courses”
+          </p>
+        </div>
+        <div className={styles.div}>
+          <a href="https://wp.hixstudio.net/eduker/courses/">All Categories</a>
+        </div>
+      </div>
 
-    {/* first div */}
       <div>
-        <h3 className={styles.head_three}>Top Categories</h3>
-        <h2 className={styles.head_two}>
-          All features <br/>
-          Topics by Categories
-        </h2>
-      </div>
-
-      {/* second div */}
-      <div>
-        <p className={styles.para}>“Explore Wonder Girl Janhavi’s Signature English Courses”</p>
-      </div>
-
-      {/* third div */}
-      <div className={styles.div}>
-        <a href="https://wp.hixstudio.net/eduker/courses/">All Categories</a>
-      </div>
-
-    </div>
-      
-      <div className={styles.category}>
-
-    <div className={styles.category_card}>
-      <h2 className={styles.category_title}>English</h2>
-      <ul className={styles.category_list}>
-        <li><a href="">Basic English Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">Intermediate English Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">Advanced English Course <span><IoIosArrowRoundForward /></span></a></li>
-      </ul>
-     
-        <button className={styles.btn}>
-          Explore
-        </button>
-      
-      </div>
-
-      <div className={styles.category_card}>
-      <h2 className={styles.category_title}>Recorded Classes</h2>
-      <ul className={styles.category_list}>
-        <li><a href="">British Accent Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">American Accent Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">Full IELTS Course <span><IoIosArrowRoundForward /></span></a></li>
-      </ul>
-     
-        <button className={styles.btn}>
-          Explore
-        </button>
-     
-      </div>
-
-      <div className={styles.category_card}>
-      <h2 className={styles.category_title}>One-to-One Classes</h2>
-      <ul className={styles.category_list}>
-        <li><a href="">Basic French Language Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">Basic Japanese Language Course <span><IoIosArrowRoundForward /></span></a></li>
-        <li><a href="">Basic Spanish Language Course <span><IoIosArrowRoundForward /></span></a></li>
-      </ul>
-      
-        <button className={styles.btn}>
-          Explore
-        </button>
-      
-      </div>
-
+        {cardsData.map((card, index) => (
+          <Card
+            key={index}
+            title={card.title}
+            links={card.links}
+            buttonText={card.buttonText}
+          />
+        ))}
       </div>
     </>
-  )
+  );
 }
 
-export default Home
-
+export default Home;
