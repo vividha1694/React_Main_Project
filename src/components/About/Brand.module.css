@@ -1,0 +1,47 @@
+
+.title{
+    color: #3D6CE7;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.heading{
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.para{
+    width:400px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 24px;
+    color:#565958;
+}
+.link{
+    text-decoration: none;
+    border: 2px solid #969998;
+    font-weight: 600;
+    font-size: 20px;
+    color:black;
+    padding: 15px;
+    margin-top: 40px;
+    display: inline-block;
+}
+.flex{
+    display: flex;
+    padding: 200px;
+    margin-left: 50px;
+}
+.flex_brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+.image img{
+    margin:40px;
+    width:100px;
+    margin-top: 40px;
+
+}
